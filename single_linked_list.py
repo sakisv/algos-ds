@@ -8,7 +8,7 @@ class Node:
     next: Node | None = None
 
 
-class List:
+class SLList:
     def __init__(self):
         self.head: Node | None = None
         self.tail: Node | None = None
@@ -124,23 +124,23 @@ class List:
 
 
 def main():
-    l1 = List()
+    l1 = SLList()
     l1.append("1")
     assert "1" == l1.print(), l1.print()
 
-    l2 = List()
+    l2 = SLList()
     l2.append("1")
     l2.append("2")
     l2.append("3")
     assert "1-2-3" == l2.print(), l2.print()
 
-    l3 = List()
+    l3 = SLList()
     l3.prepend("1")
     l3.prepend("2")
     l3.prepend("3")
     assert "3-2-1" == l3.print(), l3.print()
 
-    l4 = List()
+    l4 = SLList()
     l4.append("1")
     l4.append("3")
     assert "1-3" == l4.print()
@@ -151,7 +151,7 @@ def main():
     l4.insert_at(4, "4")
     assert "0-1-2-3-4" == l4.print(), l4.print()
 
-    l5 = List()
+    l5 = SLList()
     l5.append("1")
     l5.append("2")
     l5.append("3")
@@ -162,7 +162,7 @@ def main():
     l5.pop()
     assert "" == l5.print(), l5.print()
 
-    l6 = List()
+    l6 = SLList()
     l6.append("1")
     l6.append("2")
     l6.append("3")
