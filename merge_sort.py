@@ -42,7 +42,7 @@ def main():
     s = ms(arr)
     assert [-4, 1, 2, 3, 5, 6, 10, 11, 12, 20] == s, s
     ls = random.choices([x for x in range(25_000)], k=20_000)
-    ls = ms(ls, 0, len(ls) - 1)
+    ls = ms(ls)
     assert all(ls[i] <= ls[i + 1] for i in range(len(ls) - 1))
 
 
