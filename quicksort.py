@@ -1,3 +1,4 @@
+import random
 from typing import List
 
 
@@ -38,6 +39,9 @@ def main():
     arr = [5, 20, 6, 1, 12, 2, 10, 11, -4, 3]
     s = qs(arr, 0, len(arr) - 1)
     assert [-4, 1, 2, 3, 5, 6, 10, 11, 12, 20] == s, s
+    ls = random.choices([x for x in range(25_000)], k=20_000)
+    ls = qs(ls, 0, len(ls) - 1)
+    assert all(ls[i] <= ls[i + 1] for i in range(len(ls) - 1))
 
 
 if __name__ == "__main__":
