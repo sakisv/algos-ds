@@ -53,6 +53,12 @@ def post_order_traversal(root: Node) -> Sequence[int]:
 
 
 if __name__ == "__main__":
+    # create a tree that looks like this:
+    #             5
+    #           /   \
+    #         8      10
+    #       /   \   /   \
+    #      9     7 5     4
     root = Node(value=5, left=Node(value=8, left=Node(value=9), right=Node(value=7)), right=Node(value=10, left=Node(value=5), right=Node(value=4)))
 
     assert [5, 8, 9, 7, 10, 5, 4] == pre_order_traversal(root)
